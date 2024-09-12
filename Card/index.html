@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--cod-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card UI Design </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Boxicoons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+  <style>
+    /* Define a CSS class for rounded corners */
+    .rounded-image {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="profile-card">
+    <div class="image">
+      <img src="profile.jpg" alt="" class="profile img">
+    </div>
+    
+    <script>
+      // Function to toggle the rounded-image class on the image and change the image source
+      function toggleRounded() {
+          const image = document.getElementById("myImage");
+
+          if (image.classList.contains("rounded-image")) {
+              image.classList.remove("rounded-image");
+              // Set the image source to the URL of your original image
+              image.src = "profile.jpg";
+          } else {
+              image.classList.add("rounded-image");
+              // Set the image source to the URL of the rounded image
+              image.src = "profile.jpg";
+          }
+      }
+
+      // Attach a click event listener to the image to toggle rounded corners
+      const image = document.getElementById("profile.jpg");
+      image.addEventListener("click", toggleRounded);
+  </script>
+    <div class="text-data">
+      <span class="name">tobi</span>
+      <span class="job">card</span>
+    </div>
+    <div class="media-buttons">
+      <a href="#" style="background: #030f27" class="link">
+        <i class='bx bxl-facebook'></i>
+      </a>
+      <a href="#" style="background: #032235" class="link">
+        <i class='bx bxl-twitter'></i>
+      </a>
+      <a href="#" style="background:#380617" class="link">
+        <i class='bx bxl-instagram'></i>
+      </a>
+      <a href="#" style="background: rgb(39, 4, 4)" class="link">
+        <i class='bx bxl-youtube'></i>
+      </a>
+    </div>
+    <div class="analytics">
+      <div class="data">
+        <i class='bx bx-heart'></i>
+        <span class="number"></span>
+      </div>
+      <div class="data">
+        <i class='bx bxs-message-rounded'></i>
+        <span class="number"></span>
+      </div>
+      <div class="data">
+        <i class='bx bx-share'></i>
+        <span class="number"></span>
+      </div>
+      <div class="data">
+        <i class='bx bxs-hand-up'></i>
+        <span class="number"></span>
+      </div>
+    </div>
+</body>
